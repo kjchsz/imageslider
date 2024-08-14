@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f3f3;
+    }
+
+    .slider {
+      width: 80%;
+      max-width: 800px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .slides {
+      display: flex;
+      width: 500%; /* Increased width to accommodate 5 images */
+      animation: slide 20s infinite alternate; /* Animation changes added */
+    }
+
+    .slides img {
+      width: 20%; /* Adjusted width for 5 images */
+      transition: transform 0.5s ease;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      20% { /* Keyframes for each image position */
+        transform: translateX(-20%);
+      }
+      40% {
+        transform: translateX(-40%);
+      }
+      60% {
+        transform: translateX(-60%);
+      }
+      80% {
+        transform: translateX(-80%);
+      }
+      100% { /* Animation resets at 100% for loop */
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="slides">
+      <img src="imageslider1.jpg" alt="image 1">
+      <img src="imageslider2.jpg" alt="image 2"> 
+      <img src="imageslider3.jpg" alt="image 3">
+      <img src="imageslider4.jpg" alt="image 4">
+      <img src="imageslider5.jpg" alt="Image 5">
+    </div>
+  </div>
+</body>
+</html>
